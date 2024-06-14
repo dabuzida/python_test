@@ -1,17 +1,17 @@
-import math
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    def callName(self):
+        print(f'hello my name is {self.name}')
+    def callAge(self):
+        print(f'hello my age is {self.age}')
 
+p1 = Person('john', 36)
 
-class TreeNode:
-    def __init__(self, val, left=None, right=None):
-        self.value = val
-        self.leftChild = left
-        self.rightChild = right
-
-node1 = TreeNode(25)
-node2 = TreeNode(75)
-root = TreeNode(50, node1, node2)
-print(root.value)
-print(root.leftChild.leftChild)
-print(root.rightChild.rightChild)
-
-print(math.ceil(3.000001))
+p1.callAge()
+p1.age = 44
+p1.callAge()
+del p1.age
+p1.callAge()
